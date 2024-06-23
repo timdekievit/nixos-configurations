@@ -2,21 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{inputs, config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #inputs.home-manager.nixosModules.home-manager
+      ./nvidia.nix
     ];
-
- # home-manager = {
-    #extraSpecialArgs =  { inherit inputs; };
-    #users = {
-     #tim = import ./home.nix;
-  # };
- # };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -49,7 +42,6 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    videoDrivers = ["nvidia"];
 
     windowManager.awesome = {
       enable = true;
@@ -79,22 +71,6 @@
   hardware.opengl.extraPackages = with pkgs; [
     vaapiVdpau
   ];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    #forceFullCompositionPipeline = true;	
-};
-
- hardware.nvidia.prime = {
-    sync.enable = true;
-    # Enable if using an external GPU
-    allowExternalGpu = false;
-
-    # Make sure to use the correct Bus ID values for your system!
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
-    # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
-  };  
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tim = {
