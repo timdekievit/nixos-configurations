@@ -124,7 +124,7 @@
     mullvad-browser
     gh
   ];
-  }
+  };
 
   fonts.packages = with pkgs; [
   noto-fonts
