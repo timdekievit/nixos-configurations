@@ -5,7 +5,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  unstable = import <unstable> { };
+  unstable = import <unstable> { config = { allowUnfree = true; }; };
 in
 {
   imports =
