@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     mangohud
     protonup
+    libstrangle
   ];
 
    environment.sessionVariables = {
