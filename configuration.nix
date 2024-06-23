@@ -5,7 +5,9 @@
 { config, lib, pkgs, ... }:
 
 let
-  unstable = import <unstable> { config = { allowUnfree = true; }; };
+  unstable = import (fetchTarball {
+    url = "https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz";
+  }) { config = { allowUnfree = true; }; };
 in
 {
   imports =
