@@ -15,6 +15,7 @@ in
       ./hardware-configuration.nix
       ./nvidia.nix
       ./awesome-wm.nix
+      ./gaming.nix
     ];
 
   # Bootloader.
@@ -102,8 +103,6 @@ in
     neofetch
     (unstable.vscode)  # vscode from the unstable channel
     kitty
-    mangohud
-    protonup
     tor-browser
     git
     p7zip
@@ -124,19 +123,6 @@ in
     proggyfonts
     terminus_font
   ];
-
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/tim/.steam/root/compatibilitytools.d";
-  };
-
-  programs.steam = {
-    enable = true;
-    dedicatedServer.openFirewall = true;
-  };
-
-  programs.steam.gamescopeSession.enable = true;
-
-  programs.gamemode.enable = true;
 
   # rtkit is optional but recommended
   security.rtkit.enable = true;
