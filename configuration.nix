@@ -16,6 +16,7 @@ in
       ./nvidia.nix
       ./awesome-wm.nix
       ./gaming.nix
+      ./libinput.nix
     ];
 
   # Bootloader.
@@ -135,10 +136,6 @@ in
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
   };
-
-  services.libinput.enable = true;
-  services.libinput.mouse.accelProfile = "flat";
-  services.libinput.touchpad.naturalScrolling = true;
 
   # neccesary for nemo network to work
   services.gvfs.enable = true;
