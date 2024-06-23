@@ -14,6 +14,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nvidia.nix
+      ./awesome-wm.nix
     ];
 
   # Bootloader.
@@ -43,23 +44,6 @@ in
     LC_TELEPHONE = "nl_NL.UTF-8";
     LC_TIME = "nl_NL.UTF-8";
   };
-
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-
-    windowManager.awesome = {
-      enable = true;
-      luaModules = with pkgs.luaPackages; [
-        luarocks # is the package manager for Lua modules
-        luadbi-mysql # Database abstraction layer
-      ];
-    };
-
-  };
-
-  services.displayManager.sddm.enable = true;
-  services.displayManager.defaultSession = "none+awesome";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
