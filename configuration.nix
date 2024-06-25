@@ -80,6 +80,7 @@ in
     home-manager
     mullvad-browser
     gh
+    rofi
   ];
 
   fonts.packages = with pkgs; [
