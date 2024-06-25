@@ -81,6 +81,7 @@ in
     mullvad-browser
     gh
     rofi
+    unzip
   ];
 
   fonts.packages = with pkgs; [
