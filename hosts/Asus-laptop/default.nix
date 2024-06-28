@@ -70,16 +70,10 @@
   environment.systemPackages = with pkgs; [
     # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    firefox
     neofetch
-    # (unstable.vscode)
-    vscode  # vscode from the unstable channel
     kitty
-    tor-browser
     git
     p7zip
-    # home-manager
-    mullvad-browser
     gh
     rofi
     unzip

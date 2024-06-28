@@ -1,8 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
+  
+    imports = [
+    ./programs
+  ];
+
   home.username = "tim";
   home.homeDirectory = "/home/tim";
 
@@ -50,14 +53,15 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-      pkgs.brave
-      pkgs.cinnamon.nemo
-      pkgs.lutris
-      pkgs.discord
+  home.packages = with pkgs; [
+      brave
+      cinnamon.nemo
+      lutris
+      discord
+      tor-browser
+      vscode
+      mullvad-browser
+
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
