@@ -4,11 +4,11 @@
 
 { config, lib, pkgs, ... }:
 
-let
-  unstable = import (fetchTarball {
-    url = "https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz";
-  }) { config = { allowUnfree = true; }; };
-in
+# let
+#   unstable = import (fetchTarball {
+#     url = "https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz";
+#   }) { config = { allowUnfree = true; }; };
+# in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -72,16 +72,18 @@ in
     wget
     firefox
     neofetch
-    (unstable.vscode)  # vscode from the unstable channel
+    # (unstable.vscode)
+    vscode  # vscode from the unstable channel
     kitty
     tor-browser
     git
     p7zip
-    home-manager
+    # home-manager
     mullvad-browser
     gh
     rofi
     unzip
+    tldr
   ];
 
   fonts.packages = with pkgs; [
