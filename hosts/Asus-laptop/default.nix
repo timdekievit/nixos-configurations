@@ -13,12 +13,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./nvidia.nix
-      ./awesome-wm.nix
-      ./gaming.nix
-      ./libinput.nix
-      ./sound.nix
-      ./polkit.nix
+      ../../modules/nvidia.nix
+      ../../modules/awesome-wm.nix
+      ../../modules/gaming.nix
+      ../../modules/libinput.nix
+      ../../modules/sound.nix
+      ../../modules/polkit.nix
     ];
 
   # Bootloader.
