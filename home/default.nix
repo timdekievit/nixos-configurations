@@ -5,6 +5,7 @@
     imports = [
     ./programs
     ./awesome-wm
+    ./rofi
   ];
 
   home.username = "tim";
