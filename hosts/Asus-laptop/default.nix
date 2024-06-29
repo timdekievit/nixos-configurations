@@ -19,6 +19,7 @@
       ../../modules/libinput.nix
       ../../modules/sound.nix
       ../../modules/polkit.nix
+      ../../modules/file-manager.nix
     ];
 
   # Bootloader.
@@ -66,17 +67,15 @@
   users.defaultUserShell = pkgs.zsh;  
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     neofetch
     kitty
     git
-    p7zip
     gh
-    # rofi
+    p7zip
     unzip
+    zip
     tldr
     btop
   ];
