@@ -153,17 +153,7 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 local function set_wallpaper(s)
-    -- if beautiful.wallpaper then
-    --     local wallpaper = beautiful.wallpaper
-    --     -- If wallpaper is a function, call it with the screen
-    --     if type(wallpaper) == "function" then
-    --         wallpaper = wallpaper(s)
-    --     end
-    --     gears.wallpaper.maximized('./wallpaper.jpg', s, true)
-    -- end
-
-    -- gears.wallpaper.set("#ff0000")
-    gears.wallpaper.maximized(os.getenv("HOME") .. "/.config/awesome/wallpaper.png", s)
+    gears.wallpaper.maximized(os.getenv("HOME") .. "/.config/awesome/wallpaper.jpg", s)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
