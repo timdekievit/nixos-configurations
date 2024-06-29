@@ -78,6 +78,7 @@
     rofi
     unzip
     tldr
+    btop
   ];
 
   fonts.packages = with pkgs; [
