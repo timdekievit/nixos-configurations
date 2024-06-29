@@ -51,7 +51,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
 browser = "firefox"
-beautiful.wallpaper = "/home/tim/.config/awesome/rc.lua"
+beautiful.wallpaper = "/home/tim/.config/awesome/wallpaper.jpg"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -161,6 +161,8 @@ local function set_wallpaper(s)
         end
         gears.wallpaper.maximized('./wallpaper.jpg', s, true)
     end
+
+    -- gears.wallpaper.maximized("./wallpaper", s)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
