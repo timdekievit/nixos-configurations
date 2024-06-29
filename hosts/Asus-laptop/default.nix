@@ -75,7 +75,7 @@
     git
     p7zip
     gh
-    rofi
+    # rofi
     unzip
     tldr
     btop
