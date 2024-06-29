@@ -39,5 +39,5 @@
 #     text-color = mkLiteral "@foreground-color";
 #   };
 
-    programs.rofi.theme = ".config/rofi/powermenu.rasi";
+    programs.rofi.theme = "powermenu.rasi";
 }
