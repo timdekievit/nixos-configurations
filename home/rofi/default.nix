@@ -11,7 +11,7 @@
   # };
 
   programs.rofi.enable = true;
-  programs.rofi.theme = {
+  programs.rofi.theme = 
     let
   # Use `mkLiteral` for string-like values that should show without
   # quotes, e.g.:
@@ -38,7 +38,7 @@ in {
     margin = mkLiteral "0px 0.3em 0em 0em";
     text-color = mkLiteral "@foreground-color";
   };
-}
+
 
   };
 }
