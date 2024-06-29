@@ -162,7 +162,8 @@ local function set_wallpaper(s)
     --     gears.wallpaper.maximized('./wallpaper.jpg', s, true)
     -- end
 
-    gears.wallpaper.set("#ff0000")
+    -- gears.wallpaper.set("#ff0000")
+    gears.wallpaper.maximized("./wallpaper.png", s)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
