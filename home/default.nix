@@ -4,6 +4,7 @@
   
     imports = [
     ./programs
+    ./awesome-wm
   ];
 
   home.username = "tim";
