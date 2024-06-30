@@ -26,6 +26,12 @@
       options = [ "rw" "uid=1000"];
     };
 
+  fileSystems."/media/TB_drive" =
+    { device = "/dev/sda2";
+      fsType = "ntfs-3g"; 
+      options = [ "rw" "uid=1000"];
+    };
+
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = false;  # Enables wireless support via wpa_supplicant.
 
