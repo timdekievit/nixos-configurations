@@ -13,7 +13,7 @@
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/Asus-laptop/default.nix
+          ./hosts/Desktop-pc/default.nix
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
