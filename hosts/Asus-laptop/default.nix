@@ -12,6 +12,7 @@
       ../../modules/sound.nix
       ../../modules/polkit.nix
       ../../modules/file-manager.nix
+      ../../modules/stylix.nix
     ];
 
   # Bootloader.
