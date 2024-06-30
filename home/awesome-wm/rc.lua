@@ -53,6 +53,8 @@ beautiful.wallpaper = "~/.config/awesome/wallpaper.jpg"
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
 browser = "firefox"
+volume_up_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"
+volume_down_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"
 beautiful.wallpaper = "/home/tim/.config/awesome/wallpaper.jpg"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
@@ -275,7 +277,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,   }, "b", function () awful.spawn(browser) end,
-              {description = "open browser", group = "launcher"}),   
+              {description = "open browser", group = "launcher"}),
+    awful.key({}, "XF86AudioRaiseVolume", function()
+                awful.spawn.with_shell(volume_up_command) end,
+            {description = "increase volume", group = "custom"}),    
+    awful.key({}, "XF86AudioLowerVolume", function()
+                awful.spawn.with_shell(volume_down_command) end,
+            {description = "lower volume", group = "custom"}),                     
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
