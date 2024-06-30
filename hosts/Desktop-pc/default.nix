@@ -20,11 +20,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
 
-  # fileSystems."/path/to/mount/to" =
-  #   { device = "/path/to/the/device";
-  #     fsType = "ntfs-3g"; 
-  #     options = [ "rw" "uid=theUidOfYourUser"];
-  #   };
+  fileSystems."/media/Laptop_HDD" =
+    { device = "/dev/sdc1";
+      fsType = "ntfs-3g"; 
+      options = [ "rw" "uid=1000"];
+    };
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = false;  # Enables wireless support via wpa_supplicant.
