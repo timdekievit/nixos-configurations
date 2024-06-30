@@ -8,7 +8,7 @@
   hardware.nvidia.forceFullCompositionPipeline = true;
 
   services.xserver.videoDrivers = ["nvidia"];
-  services.xserver.displayManager.setupCommands = ''${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --mode 2560x1080 --pos 0x0 --rotate normal2 --output HDMI-0 --off '';
+  services.xserver.displayManager.setupCommands = ''${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --mode 2560x1080 --pos 0x0 --rotate normal --output HDMI-0 --off '';
 
   # Enable OpenGL
   hardware.graphics = {
