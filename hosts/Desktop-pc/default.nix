@@ -71,6 +71,7 @@
     zip
     tldr
     btop
+    lshw
   ];
 
   fonts.packages = with pkgs; [
