@@ -5,7 +5,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ../../modules/nvidia-940m.nix
+      ../../modules/nvidia-980.nix
       ../../modules/awesome-wm.nix
       ../../modules/gaming.nix
       ../../modules/libinput.nix
