@@ -20,23 +20,23 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
 
-  # fileSystems."/media/Laptop_HDD" =
-  #   { device = "/dev/sdc1";
-  #     fsType = "ntfs-3g"; 
-  #     options = [ "rw" "uid=1000"];
-  #   };
+  fileSystems."/media/Laptop_HDD" =
+    { device = "/dev/disk/by-uuid/1228BD2E28BD11A9";
+      fsType = "ntfs-3g"; 
+      options = [ "rw" "uid=1000"];
+    };
 
-  # fileSystems."/media/TB_drive" =
-  #   { device = "/dev/sdb2";
-  #     fsType = "ntfs-3g"; 
-  #     options = [ "rw" "uid=1000"];
-  #   };
+  fileSystems."/media/TB_drive" =
+    { device = "/dev/disk/by-uuid/0252E18F1516681C"; 
+      fsType = "ntfs-3g"; 
+      options = [ "rw" "uid=1000"];
+    };
 
-  # fileSystems."/media/Windows_C" =
-  #   { device = "/dev/sda2";
-  #     fsType = "ntfs-3g"; 
-  #     options = [ "rw" "uid=1000"];
-  #   };  
+  fileSystems."/media/Windows_C" =
+    { device = "/dev/disk/by-uuid/C872904E7290435C";
+      fsType = "ntfs-3g"; 
+      options = [ "rw" "uid=1000"];
+    };  
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = false;  # Enables wireless support via wpa_supplicant.
