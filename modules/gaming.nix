@@ -6,6 +6,8 @@
     mangohud
     protonup
     libstrangle
+    bottles
+    lutris
   ];
 
    environment.sessionVariables = {

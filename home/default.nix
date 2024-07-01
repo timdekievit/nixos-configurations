@@ -58,7 +58,6 @@
   home.packages = with pkgs; [
       brave
       cinnamon.nemo
-      lutris
       discord
       tor-browser
       vscode
