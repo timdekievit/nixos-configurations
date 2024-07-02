@@ -37,6 +37,7 @@
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "macchiato";
         accent = "blue";
+    };
   };
 
   gtk.gtk3 = {extraConfig.gtk-application-prefer-dark-theme = true;};
