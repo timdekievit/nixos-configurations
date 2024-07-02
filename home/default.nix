@@ -22,16 +22,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # qt.enable = true;
-  # qt.platformTheme.name = "gtk";
-  # qt.style.name = "adwaita-dark";
-  # qt.style.package = pkgs.adwaita-qt;
-
   gtk.enable = true;
-
-  # gtk.theme.package = pkgs.adw-gtk3;
-  # gtk.theme.name = "adw-gtk3";
-
   gtk.iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
@@ -39,7 +30,6 @@
         accent = "blue";
     };
   };
-
   gtk.gtk3 = {extraConfig.gtk-application-prefer-dark-theme = true;};
 
   programs.zsh = {
