@@ -22,10 +22,18 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  qt.enable = true;
-  qt.platformTheme.name = "gtk";
-  qt.style.name = "adwaita-dark";
-  qt.style.package = pkgs.adwaita-qt;
+  # qt.enable = true;
+  # qt.platformTheme.name = "gtk";
+  # qt.style.name = "adwaita-dark";
+  # qt.style.package = pkgs.adwaita-qt;
+
+  gtk.enable = true;
+
+  gtk.theme.package = pkgs.adw-gtk3;
+  gtk.theme.name = "adw-gtk3";
+
+  gtk.iconTheme.package = gruvboxPlus;
+  gtk.iconTheme.name = "GruvboxPlus";
 
   programs.zsh = {
     enable = true;
@@ -59,7 +67,6 @@
       cinnamon.nemo
       discord
       vscode
-      zuki-themes
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
