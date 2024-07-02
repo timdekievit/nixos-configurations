@@ -56,13 +56,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-      brave
       cinnamon.nemo
       discord
-      tor-browser
       vscode
-      mullvad-browser
-
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
