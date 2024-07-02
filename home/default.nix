@@ -32,8 +32,14 @@
   gtk.theme.package = pkgs.adw-gtk3;
   gtk.theme.name = "adw-gtk3";
 
-  gtk.iconTheme.package = gruvboxPlus;
-  gtk.iconTheme.name = "GruvboxPlus";
+  gtk.iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "macchiato";
+        accent = "blue";
+  };
+
+  gtk.gtk3 = {extraConfig.gtk-application-prefer-dark-theme = true;};
 
   programs.zsh = {
     enable = true;
