@@ -92,6 +92,7 @@
     btop
     lshw
     gparted
+    arandr
   ];
 
   fonts.packages = with pkgs; [
