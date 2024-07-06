@@ -87,6 +87,7 @@
     gh
     p7zip
     unzip
+    unrar
     zip
     tldr
     btop
