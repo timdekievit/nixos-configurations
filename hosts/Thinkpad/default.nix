@@ -108,6 +108,15 @@
     vscode
   ];
 
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    gnome-music
+    epiphany # web browser
+    geary # email reader
+]);
+
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
