@@ -23,15 +23,15 @@
   nixpkgs.config.allowUnfree = true;
 
   # installing icon theme
-  gtk.enable = true;
-  gtk.iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "macchiato";
-        accent = "blue";
-    };
-  };
-  gtk.gtk3 = {extraConfig.gtk-application-prefer-dark-theme = true;};
+  # gtk.enable = true;
+  # gtk.iconTheme = {
+  #     name = "Papirus-Dark";
+  #     package = pkgs.catppuccin-papirus-folders.override {
+  #       flavor = "macchiato";
+  #       accent = "blue";
+  #   };
+  # };
+  # gtk.gtk3 = {extraConfig.gtk-application-prefer-dark-theme = true;};
 
   programs.zsh = {
     enable = true;
@@ -50,27 +50,27 @@
 
 };
 
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "audio/*" = ["mpv.desktop"];
-      "video/*" = ["mpv.dekstop"];
-    };
-  };
+  # xdg.mimeApps = {
+  #   enable = true;
+  #   defaultApplications = {
+  #     "x-scheme-handler/http" = ["firefox.desktop"];
+  #     "x-scheme-handler/https" = ["firefox.desktop"];
+  #     "text/html" = ["firefox.desktop"];
+  #     "audio/*" = ["mpv.desktop"];
+  #     "video/*" = ["mpv.dekstop"];
+  #   };
+  # };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-      cinnamon.nemo
+      #cinnamon.nemo
       discord
       vscode
       picard
       yt-dlp
       mpv
-      flameshot
+      #flameshot
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
