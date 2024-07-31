@@ -4,8 +4,6 @@
   
     imports = [
     ./programs
-    ./awesome-wm
-    ./rofi
   ];
 
   home.username = "tim";
@@ -49,6 +47,13 @@
   };
 
 };
+
+  programs.git = {
+    enable = true;
+    userName  = "John Doe";
+    userEmail = "johndoe@example.com";
+  };
+
 
   # xdg.mimeApps = {
   #   enable = true;
