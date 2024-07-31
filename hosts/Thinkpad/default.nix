@@ -95,7 +95,6 @@
   environment.systemPackages = with pkgs; [
     wget
     neofetch
-    kitty
     git
     gh
     p7zip
@@ -111,6 +110,8 @@
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
+  services.mullvad-vpn.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
