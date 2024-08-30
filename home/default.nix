@@ -61,6 +61,7 @@
       vscode
       picard
       yt-dlp
+      parabolic
       mpv
       mullvad-vpn
   ];
