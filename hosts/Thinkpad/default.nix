@@ -52,9 +52,9 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -113,11 +113,10 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
-  ]) ++ (with pkgs.gnome; [
     gnome-music
     epiphany # web browser
     geary # email reader
-]);
+  ]);
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
