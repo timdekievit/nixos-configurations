@@ -116,6 +116,8 @@
     gnome-music
     epiphany # web browser
     geary # email reader
+    totem # video player
+    gnome-contacts
   ]);
 
   programs.zsh.enable = true;
