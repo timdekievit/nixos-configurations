@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/gaming.nix
     ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
