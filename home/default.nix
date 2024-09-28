@@ -4,8 +4,8 @@
   
     imports = [
     ./programs
-    ./awesome-wm
-    ./rofi
+    # ./awesome-wm
+    # ./rofi
   ];
 
   home.username = "tim";

@@ -6,13 +6,13 @@
     [ 
       ./hardware-configuration.nix
       ../../modules/nvidia-980.nix
-      ../../modules/awesome-wm.nix
+      # ../../modules/awesome-wm.nix
       ../../modules/gaming.nix
-      ../../modules/libinput.nix
-      ../../modules/sound.nix
-      ../../modules/polkit.nix
+      # ../../modules/libinput.nix
+      # ../../modules/sound.nix
+      # ../../modules/polkit.nix
       ../../modules/file-manager.nix
-      ../../modules/stylix.nix
+      # ../../modules/stylix.nix
     ];
 
   # Bootloader.
@@ -125,6 +125,16 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  services.xserver.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+  # environment.plasma6.excludePackages = with pkgs.kdePackages; [
+  #   plasma-browser-integration
+  #   konsole
+  #   oxygen
+  # ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
