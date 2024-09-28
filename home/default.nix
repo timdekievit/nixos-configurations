@@ -4,8 +4,6 @@
   
     imports = [
     ./programs
-    # ./awesome-wm
-    # ./rofi
   ];
 
   home.username = "tim";
@@ -21,17 +19,6 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
   nixpkgs.config.allowUnfree = true;
-
-  # installing icon theme
-  # gtk.enable = true;
-  # gtk.iconTheme = {
-  #     name = "Papirus-Dark";
-  #     package = pkgs.catppuccin-papirus-folders.override {
-  #       flavor = "macchiato";
-  #       accent = "blue";
-  #   };
-  # };
-  # gtk.gtk3 = {extraConfig.gtk-application-prefer-dark-theme = true;};
 
   programs.zsh = {
     enable = true;
@@ -50,17 +37,6 @@
 
 };
 
-  # xdg.mimeApps = {
-  #   enable = true;
-  #   defaultApplications = {
-  #     "x-scheme-handler/http" = ["firefox.desktop"];
-  #     "x-scheme-handler/https" = ["firefox.desktop"];
-  #     "text/html" = ["firefox.desktop"];
-  #     "audio/*" = ["mpv.desktop"];
-  #     "video/*" = ["mpv.dekstop"];
-  #   };
-  # };
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -72,19 +48,6 @@
       mpv
       flameshot
       pigz
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

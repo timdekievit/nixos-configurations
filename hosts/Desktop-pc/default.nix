@@ -6,13 +6,9 @@
     [ 
       ./hardware-configuration.nix
       ../../modules/nvidia-980.nix
-      # ../../modules/awesome-wm.nix
       ../../modules/gaming.nix
-      # ../../modules/libinput.nix
-      # ../../modules/sound.nix
-      # ../../modules/polkit.nix
+      ../../modules/sound.nix
       ../../modules/file-manager.nix
-      # ../../modules/stylix.nix
     ];
 
   # Bootloader.
@@ -96,57 +92,23 @@
     arandr
   ];
 
-  # fonts.packages = with pkgs; [
-  #   noto-fonts
-  #   noto-fonts-cjk
-  #   noto-fonts-emoji
-  #   liberation_ttf
-  #   fira-code
-  #   fira-code-symbols
-  #   mplus-outline-fonts.githubRelease
-  #   dina-font
-  #   proggyfonts
-  #   terminus_font
-  # ];
-
   # rtkit is optional but recommended
   security.rtkit.enable = true;
 
   # neccesary for nemo network to work
   services.gvfs.enable = true;
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  # environment.plasma6.excludePackages = with pkgs.kdePackages; [
-  #   plasma-browser-integration
-  #   konsole
-  #   oxygen
-  # ];
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    plasma-browser-integration
+    konsole
+    oxygen
+  ];
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 }

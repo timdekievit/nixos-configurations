@@ -3,6 +3,7 @@
 {
    hardware.nvidia = {
     modesetting.enable = true;
+    open = false;
   };
 
   # hardware.nvidia.forceFullCompositionPipeline = true;
