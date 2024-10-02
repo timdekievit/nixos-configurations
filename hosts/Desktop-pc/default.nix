@@ -77,7 +77,7 @@
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     wget
-    neofetch
+    fastfetch
     kitty
     git
     gh
@@ -89,7 +89,6 @@
     btop
     lshw
     gparted
-    arandr
   ];
 
   # rtkit is optional but recommended
