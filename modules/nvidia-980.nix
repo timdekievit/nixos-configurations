@@ -15,13 +15,13 @@
   # '';
 
   # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
+  # hardware.graphics = {
+  #   enable = true;
+  #   enable32Bit = true;
+  # };
 
-  hardware.graphics.extraPackages = with pkgs; [
-    vaapiVdpau
-  ];
+  # hardware.graphics.extraPackages = with pkgs; [
+  #   vaapiVdpau
+  # ];
 
 }
