@@ -100,15 +100,14 @@
 
   services.openssh.enable = true;
 
-  services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    plasma-browser-integration
-    konsole
-    oxygen
-  ];
+  services.displayManager.defaultSession = "cinnamon";
+  services.xserver = {
+    enable = true;
+    displayManager.lightdm.enable = true;
+    desktopManager = {
+      cinnamon.enable = true;
+    };
+  };
 
   system.stateVersion = "24.05"; # Did you read the comment?
 }
