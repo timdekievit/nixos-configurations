@@ -89,6 +89,7 @@
     btop
     lshw
     gparted
+    pigz
   ];
 
   # rtkit is optional but recommended
