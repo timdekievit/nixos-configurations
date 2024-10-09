@@ -46,6 +46,7 @@
       picard
       yt-dlp
       mpv
+      jellyfin-media-player
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
