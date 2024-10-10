@@ -7,7 +7,6 @@
       ./hardware-configuration.nix
       ../../modules/nvidia-980.nix
       ../../modules/gaming.nix
-      ../../modules/file-manager.nix
     ];
 
   # Bootloader.
