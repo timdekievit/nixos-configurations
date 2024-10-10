@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  
     imports = [
     ./programs
   ];
@@ -34,7 +33,6 @@
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
   };
-
 };
 
   # The home.packages option allows you to install Nix packages into your
