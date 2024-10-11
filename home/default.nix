@@ -45,6 +45,7 @@
       yt-dlp
       mpv
       jellyfin-media-player
+      libreoffice
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
