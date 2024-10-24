@@ -88,6 +88,7 @@
     lshw
     gparted
     pigz
+    ffmpeg-full
   ];
 
   # rtkit is optional but recommended
