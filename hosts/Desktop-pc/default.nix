@@ -89,6 +89,7 @@
     gparted
     pigz
     ffmpeg-full
+    dotnet-sdk_8
   ];
 
   # rtkit is optional but recommended
