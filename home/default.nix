@@ -47,6 +47,7 @@
       jellyfin-media-player
       libreoffice
       amberol
+      uv
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
