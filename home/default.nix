@@ -48,6 +48,7 @@
       libreoffice
       amberol
       uv
+      obs-studio
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
